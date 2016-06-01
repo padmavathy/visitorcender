@@ -1,0 +1,2992 @@
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (5.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVisitors (20160527065728)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "visitors" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "reason" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160527065728"]]
+  [1m[36m (2.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'visitors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 12:59:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/visitors_controller.rb:2:in `<class:VisitorsController>'
+  app/controllers/visitors_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (32.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (93.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (58.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 12:59:22 +0530
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/visitors_controller.rb:2:in `<class:VisitorsController>'
+  app/controllers/visitors_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 13:00:35 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4657ms (Views: 4647.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 13:00:40 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 13:00:57 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 104ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:02 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:03 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:03 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:03 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:03 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 13:01:03 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 13:01:21 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 108ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 13:01:26 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:12:26 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 290ms (Views: 289.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 14:13:22 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:13:24 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 57ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:23:42 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:24:01 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 14:33:35 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:33:37 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 52ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:37:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 733ms (Views: 710.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 14:37:55 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:55 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 14:37:55 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 14:37:56 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:37:58 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 76ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:38:00 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:47:03 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 432ms (Views: 422.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 14:47:04 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 14:47:07 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 88ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:12:06 +0530
+
+NoMethodError (undefined method `raise_in_transactional_callbacks=' for #<Class:0xaa16008>):
+  activerecord (4.1.6) lib/active_record/dynamic_matchers.rb:26:in `method_missing'
+  activerecord (4.1.6) lib/active_record/railtie.rb:110:in `block (3 levels) in <class:Railtie>'
+  activerecord (4.1.6) lib/active_record/railtie.rb:109:in `each'
+  activerecord (4.1.6) lib/active_record/railtie.rb:109:in `block (2 levels) in <class:Railtie>'
+  activesupport (4.1.6) lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+  activesupport (4.1.6) lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+  activesupport (4.1.6) lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+  activesupport (4.1.6) lib/active_support/lazy_load_hooks.rb:44:in `each'
+  activesupport (4.1.6) lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+  activerecord (4.1.6) lib/active_record/base.rb:326:in `<module:ActiveRecord>'
+  activerecord (4.1.6) lib/active_record/base.rb:23:in `<top (required)>'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/share/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:12:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4409ms (Views: 4398.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:12:47 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 195ms (Views: 194.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 15:12:48 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:12:52 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 166ms (Views: 165.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:13:04 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 215ms (Views: 214.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:13:38 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 170ms (Views: 168.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:23:31 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 151ms (Views: 149.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 140ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 15:23:33 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 15:25:16 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 136ms (Views: 134.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 15:25:16 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/visitors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 15:25:17 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 16:25:16 +0530
+Processing by VisitorsController#index as HTML
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/visitors_controller.rb:4:in `index'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 16:29:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+Completed 406 Not Acceptable in 10ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/visitors_controller.rb:4:in `index'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (50.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 648ms (Views: 647.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:00 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-27 16:30:01 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.6ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-27 16:30:08 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"dfsdf", "last_name"=>"sdfsd", "reason"=>"sdf", "visitor"=>{"first_name"=>"dfsdf", "last_name"=>"sdfsd", "reason"=>"sdf"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "visitors" ("created_at", "first_name", "last_name", "reason", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-05-27 11:00:08.713728"], ["first_name", "dfsdf"], ["last_name", "sdfsd"], ["reason", "sdf"], ["updated_at", "2016-05-27 11:00:08.713728"]]
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 31ms (Views: 4.8ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 09:46:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (14.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+Completed 406 Not Acceptable in 12ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/visitors_controller.rb:4:in `index'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (66.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 09:47:21 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 399ms (Views: 398.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 09:47:22 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (27.6ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 72ms (Views: 5.6ms | ActiveRecord: 61.9ms)
+
+
+Started DELETE "/visitors/1?created_at=2016-05-27T11:00:08.713Z&first_name=dfsdf&last_name=sdfsd&reason=sdf&updated_at=2016-05-27T11:00:08.713Z" for 127.0.0.1 at 2016-05-31 09:47:25 +0530
+Processing by VisitorsController#destroy as JSON
+  Parameters: {"created_at"=>"2016-05-27T11:00:08.713Z", "first_name"=>"dfsdf", "last_name"=>"sdfsd", "reason"=>"sdf", "updated_at"=>"2016-05-27T11:00:08.713Z", "id"=>"1"}
+  [1m[36mVisitor Load (0.3ms)[0m  [1mSELECT  "visitors".* FROM "visitors"  WHERE "visitors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "visitors" WHERE "visitors"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Completed 204 No Content in 32ms (ActiveRecord: 2.2ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 09:47:32 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"adfasdf", "last_name"=>"asdfasdf", "reason"=>"asdfasdf", "visitor"=>{"first_name"=>"adfasdf", "last_name"=>"asdfasdf", "reason"=>"asdfasdf"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.0ms)[0m  INSERT INTO "visitors" ("created_at", "first_name", "last_name", "reason", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-05-31 04:17:32.804348"], ["first_name", "adfasdf"], ["last_name", "asdfasdf"], ["reason", "asdfasdf"], ["updated_at", "2016-05-31 04:17:32.804348"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 41ms (Views: 18.5ms | ActiveRecord: 18.3ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 09:47:41 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"sss", "reason"=>"ss", "last_name"=>"sss", "visitor"=>{"first_name"=>"sss", "last_name"=>"sss", "reason"=>"ss"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "visitors" ("created_at", "first_name", "last_name", "reason", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-05-31 04:17:41.129485"], ["first_name", "sss"], ["last_name", "sss"], ["reason", "ss"], ["updated_at", "2016-05-31 04:17:41.129485"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 09:47:53 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"sss", "last_name"=>"sss", "reason"=>"ss", "visitor"=>{"first_name"=>"sss", "last_name"=>"sss", "reason"=>"ss"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "visitors" ("created_at", "first_name", "last_name", "reason", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2016-05-31 04:17:53.506925"], ["first_name", "sss"], ["last_name", "sss"], ["reason", "ss"], ["updated_at", "2016-05-31 04:17:53.506925"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 8ms (Views: 0.6ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 09:48:42 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"visitor"=>{}}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: visitor):
+  app/controllers/visitors_controller.rb:20:in `visitor_params'
+  app/controllers/visitors_controller.rb:11:in `create'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.4ms)
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 09:55:45 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.4ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 09:55:50 +0530
+Processing by VisitorsController#create as JSON
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: visitor):
+  app/controllers/visitors_controller.rb:20:in `visitor_params'
+  app/controllers/visitors_controller.rb:11:in `create'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:11:44 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 121ms (Views: 120.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:11:44 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:11:45 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.3ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:11:57 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"adasdsa", "visitor"=>{"first_name"=>"adasdsa"}}
+  [1m[35m (2.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 119ms (Views: 118.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:12:50 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:12:51 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.3ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:12:57 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"sdfsf", "visitor"=>{"first_name"=>"sdfsf"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 126ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:13:06 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.2ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 122ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:16:52 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.4ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:16:57 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"asdsa", "visitor"=>{"first_name"=>"asdsa"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 115ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:17:33 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.3ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:17:36 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"dsgasdg", "visitor"=>{"first_name"=>"dsgasdg"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 122ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:33 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:34 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:20:34 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:20:34 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.3ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:20:38 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"sdgfsdfg", "visitor"=>{"first_name"=>"sdgfsdfg"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:21:00 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 117ms (Views: 115.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/visitors.self-33882cfe063f35e4eecb72cbc6e7b901f992fcf2bfc0eb71f51061f8b6293885.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:21:01 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.4ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 18ms (Views: 6.8ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:21:03 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"asdaSD", "visitor"=>{"first_name"=>"asdaSD"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 401ms (Views: 400.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:00 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/visitors.self-f149644268629ac072439316b4122b5fdab97004f331dcdaa654492286ad096b.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:47:01 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.3ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 118ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/visitors.self-f149644268629ac072439316b4122b5fdab97004f331dcdaa654492286ad096b.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:47:32 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.3ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:47:34 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:34 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:34 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:47:34 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:34 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:34 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:34 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/visitors.self-f149644268629ac072439316b4122b5fdab97004f331dcdaa654492286ad096b.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:47:35 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.3ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:49:14 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 356ms (Views: 355.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/visitors.self-6e5d2b3a68c4baa2472abb7fb98cb27f3532f5e38d725e8f0a9eba5f81c93b71.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:49:15 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.3ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:49:18 +0530
+Processing by VisitorsController#create as JSON
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: visitor):
+  app/controllers/visitors_controller.rb:20:in `visitor_params'
+  app/controllers/visitors_controller.rb:11:in `create'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.8ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:49:39 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"visitor"=>{}}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: visitor):
+  app/controllers/visitors_controller.rb:20:in `visitor_params'
+  app/controllers/visitors_controller.rb:11:in `create'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.5ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:49:40 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"visitor"=>{}}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: visitor):
+  app/controllers/visitors_controller.rb:20:in `visitor_params'
+  app/controllers/visitors_controller.rb:11:in `create'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:49:41 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 143ms (Views: 142.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/visitors.self-6e5d2b3a68c4baa2472abb7fb98cb27f3532f5e38d725e8f0a9eba5f81c93b71.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:49:42 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.2ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:50:33 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 372ms (Views: 371.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/assets/visitors.self-1d30ed679b224355baf5346c3e00cebcd53e96ed6957dcf8865343acc85a646d.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:50:34 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.3ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 349ms (Views: 348.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:39 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:40 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:40 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:40 +0530
+
+
+Started GET "/assets/visitors.self-162433ee702f987e7be1bf96c38f64cbac5f5d11cdf1c1d10b3ef50e9300fa8b.js?body=1" for 127.0.0.1 at 2016-05-31 10:50:40 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:50:40 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.3ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:50:44 +0530
+Processing by VisitorsController#create as JSON
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: visitor):
+  app/controllers/visitors_controller.rb:20:in `visitor_params'
+  app/controllers/visitors_controller.rb:11:in `create'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 10:51:11 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 361ms (Views: 360.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/assets/visitors.self-e3841080662faa689daacff3e37bda55ea2e0e2848021dac094e7c9c95bc0e89.js?body=1" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 10:51:12 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.3ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:51:14 +0530
+Processing by VisitorsController#create as JSON
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: visitor):
+  app/controllers/visitors_controller.rb:20:in `visitor_params'
+  app/controllers/visitors_controller.rb:11:in `create'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.2ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:54:46 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"first_name"=>"asdgsd", "last_name"=>"gadsd", "reason"=>"asdgasd", "visitor"=>{"first_name"=>"asdgsd", "last_name"=>"gadsd", "reason"=>"asdgasd"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "visitors" ("created_at", "first_name", "last_name", "reason", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-05-31 05:24:46.324599"], ["first_name", "asdgsd"], ["last_name", "gadsd"], ["reason", "asdgasd"], ["updated_at", "2016-05-31 05:24:46.324599"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+Completed 201 Created in 8ms (Views: 1.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2016-05-31 10:54:58 +0530
+Processing by VisitorsController#create as JSON
+  Parameters: {"visitor"=>{}}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: visitor):
+  app/controllers/visitors_controller.rb:20:in `visitor_params'
+  app/controllers/visitors_controller.rb:11:in `create'
+
+
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.4ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.8ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/padmavathy-019/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 356ms (Views: 355.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:27 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:28 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:28 +0530
+
+
+Started GET "/assets/visitors.self-46e232e2651cb4536afcb796221a5bbd78110a7b8bef915404e7559c3f052115.js?body=1" for 127.0.0.1 at 2016-05-31 11:15:28 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 11:15:28 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.9ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 11:16:06 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 353ms (Views: 352.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:07 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 11:16:15 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 214ms (Views: 213.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/visitors.self-c9ad6b4210a529a9dc110506c4bfc44284d593905b79b322977d9f116dad68cd.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:16 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 11:16:20 +0530
+Processing by VisitorsController#index as JSON
+  [1m[35mVisitor Load (0.3ms)[0m  SELECT "visitors".* FROM "visitors"
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-31 11:16:23 +0530
+Processing by VisitorsController#index as HTML
+  Rendered visitors/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 135ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap_config.self-802123b5752e3a3553cdb38fa851ad82bde03b440b0cad0a58e77c3ca58bf35d.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/jquery.self-4c7649dd655c61cb850cfd2e71f937c3bbf3e3a752a3499ed8bb9884473fe1dd.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/visitors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/jquery_ujs.self-82819b9f2de121124a614eeab50287468ad6f4b1ef4437925a7832ffbdf2cce9.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/angular.self-b37794cda0735633092111915d788d49a9de42cea70dc72967123d221108ed83.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/angular-resource.self-a3123e7a45f213633b64872b90aaabd226daf59fd549e40964e697fb960d3d51.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/visitors.self-c9ad6b4210a529a9dc110506c4bfc44284d593905b79b322977d9f116dad68cd.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-05-31 11:16:24 +0530
+
+
+Started GET "/visitors" for 127.0.0.1 at 2016-05-31 11:16:31 +0530
+Processing by VisitorsController#index as JSON
+  [1m[36mVisitor Load (0.2ms)[0m  [1mSELECT "visitors".* FROM "visitors"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
